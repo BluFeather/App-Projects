@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Binary2Decimal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="Binary2Decimal" Height="135" Width="180">
+    
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="5"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Binary" TextAlignment="Right" VerticalAlignment="Center"
+                       Margin="0, 0, 5, 0"/>
+            <TextBox Text="00000000" VerticalAlignment="Center"
+                     Grid.Row="0" Grid.Column="1"
+                     x:Name="binaryInput"/>
+
+            <TextBlock Text="Decimal" TextAlignment="Right" VerticalAlignment="Center"
+                       Grid.Row="2" Grid.Column="0" Margin="0, 0, 5, 0"/>
+            <TextBox Text="00000000" VerticalAlignment="Center"
+                     Grid.Row="2" Grid.Column="1"
+                     x:Name="decimalInput"/>
+        </Grid>
+        <TextBlock Text="Messages go here" TextAlignment="Center" HorizontalAlignment="Stretch"
+                       Background="#FAFAFA"
+                       Grid.Row="2" Grid.ColumnSpan="2" Height="18"/>
     </Grid>
 </Window>
